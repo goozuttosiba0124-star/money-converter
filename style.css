@@ -1,0 +1,172 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 32px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: Arial, "Noto Sans JP", sans-serif;
+  color: #263238;
+  background: linear-gradient(135deg, #edf3f8, #dce7f2);
+}
+
+.converter {
+  width: 100%;
+  max-width: 460px;
+  padding: 32px;
+  background: #ffffff;
+  border: 1px solid #e0e7ef;
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(30, 55, 80, 0.1);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.eyebrow {
+  color: #5278a7;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+h1 {
+  margin: 10px 0;
+  font-size: 29px;
+}
+
+.description {
+  margin: 0;
+  color: #718096;
+  font-size: 14px;
+}
+
+label {
+  display: block;
+  margin: 18px 0 8px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+input,
+select {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px;
+  border: 1px solid #ccd6e2;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #263238;
+  font-size: 16px;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid #a9c6ed;
+  border-color: #5278a7;
+}
+
+button {
+  width: 100%;
+  min-height: 46px;
+  border: none;
+  border-radius: 9px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+.swap-button {
+  margin-top: 12px;
+  background: #edf2f7;
+  color: #315c85;
+}
+
+.swap-button:hover {
+  background: #dce7f2;
+}
+
+.convert-button {
+  margin-top: 22px;
+  background: #315c9b;
+  color: #ffffff;
+}
+
+.convert-button:hover {
+  background: #244777;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+  transform: none;
+}
+
+.result-card {
+  margin-top: 26px;
+  padding: 22px 14px;
+  border-radius: 13px;
+  background: #f2f6fb;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.result-label {
+  margin: 0;
+  color: #718096;
+  font-size: 13px;
+}
+
+#result {
+  margin: 10px 0;
+  font-size: clamp(23px, 6vw, 30px);
+  color: #244777;
+}
+
+#rate,
+#rateDate {
+  margin: 8px 0 0;
+  color: #718096;
+  font-size: 12px;
+}
+
+#error {
+  min-height: 18px;
+  margin: 12px 0 0;
+  color: #c0392b;
+  font-size: 13px;
+  text-align: center;
+}
+
+footer {
+  margin-top: 22px;
+  color: #8995a3;
+  text-align: center;
+  font-size: 11px;
+}
+
+footer p {
+  margin: 0;
+}
+
+@media (max-width: 420px) {
+  .converter {
+    padding: 24px 18px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+}

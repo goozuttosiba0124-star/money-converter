@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>為替換算アプリ</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="converter">
+    <header>
+      <p class="eyebrow">CURRENCY CONVERTER</p>
+      <h1>💱 為替換算</h1>
+      <p class="description">通貨を選んで、かんたん換算。</p>
+    </header>
+
+    <section class="form-area">
+      <label for="amount">金額</label>
+      <input
+        id="amount"
+        type="number"
+        value="1000"
+        min="0"
+        step="any"
+        placeholder="金額を入力"
+      >
+
+      <label for="fromCurrency">換算元</label>
+      <select id="fromCurrency">
+        <option value="JPY">日本円 (JPY)</option>
+        <option value="USD">米ドル (USD)</option>
+        <option value="EUR">ユーロ (EUR)</option>
+      </select>
+
+      <button id="swapButton" class="swap-button" type="button">
+        ⇅ 通貨を入れ替える
+      </button>
+
+      <label for="toCurrency">換算先</label>
+      <select id="toCurrency">
+        <option value="USD">米ドル (USD)</option>
+        <option value="JPY">日本円 (JPY)</option>
+        <option value="EUR">ユーロ (EUR)</option>
+      </select>
+
+      <button id="convertButton" class="convert-button" type="button">
+        換算する
+      </button>
+    </section>
+
+    <section class="result-card" aria-live="polite">
+      <p class="result-label">換算結果</p>
+      <h2 id="result">金額を換算しよう</h2>
+      <p id="rate"></p>
+      <p id="rateDate"></p>
+    </section>
+
+    <p id="error" role="alert"></p>
+
+    <footer>
+      <p>為替データ：Frankfurter API</p>
+    </footer>
+  </main>
+</body>
+</html>
